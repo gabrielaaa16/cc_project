@@ -73,13 +73,14 @@ function ChatComponent(props) {
 	}
 
 	return (
+		<section className={"bg-white"} style={{backgroundImage: "url('https://images.pexels.com/photos/572061/pexels-photo-572061.jpeg?auto=compress&cs=tinysrgb&w=1600')", backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh' }}>
+		<div className={'w-full mx-auto text-center text-6xl font-bold text-blue-600'}>
+			Welcome to the fun chat!
+		</div><br></br><br></br>
+		<center><a href="http://localhost:3000" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Library</a></center><br></br>
+
 		<div className={"w-full max-w-[1500px] mx-auto my-10"}>
 			<div className={"border border-b-0 rounded-lg border-gray-300'"}>
-				<div className={'border-b text-center px-[20px] py-[10px]'}>
-					<span className={'text-md font-bold text-gray-900'}>
-						This a chat component that looks like Yahoo!
-					</span>
-				</div>
 				<MessageBox chatMessages={chatMessages}/>
 			</div>
 			<input
@@ -90,6 +91,7 @@ function ChatComponent(props) {
 				onKeyDown={handleKeyDown}
 			/>
 		</div>
+		</section>
 	);
 }
 

@@ -15,7 +15,7 @@ function MessageBox(props) {
 		<div className={'h-[400px] overflow-auto px-[20px]'}>
 			<ul className={'divide-y divide-gray-200'}>
 				<li className={ 'py-3' }>
-							<span className={ `block text-green-800 font-bold` }>
+							<span className={ `block mb-2 text-2xl font-bold text-red-400` }>
 								ChatGPT:
 							</span>
 					<span className={ 'block' }>
@@ -26,7 +26,7 @@ function MessageBox(props) {
 					chatMessages.map((message, index) => {
 						return (
 							<li className={'py-3'} key={index}>
-								<span className={ `block ${message.role === 'assistant' ? 'text-green-800' : 'text-blue-800'} font-bold` }>
+								<span className={ `block ${message.role === 'assistant' ? 'mb-2 text-2xl font-bold text-red-400' : 'mb-2 text-2xl font-bold text-blue-400'} font-bold` }>
 									{
 										message.role === 'assistant' ? 'ChatGPT:' : 'You:'
 									}
